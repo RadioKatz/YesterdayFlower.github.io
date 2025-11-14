@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #8B4513;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'MedievalSharp', cursive;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(139, 69, 19, 0.3) 0%, transparent 20%),
+        radial-gradient(circle at 90% 80%, rgba(139, 69, 19, 0.3) 0%, transparent 20%);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    background-color: #F5DEB3;
+    border: 8px double #8B4513;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    box-shadow: 
+        0 0 20px rgba(0, 0, 0, 0.5),
+        inset 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    max-width: 600px;
+    width: 90%;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid #D2B48C;
+    border-radius: 15px;
+    pointer-events: none;
+}
+
+h1 {
+    color: #8B4513;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: relative;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 4px;
+    background: linear-gradient(to right, transparent, #8B4513, transparent);
+    margin: 10px auto;
+}
+
+.icon-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    background-color: #8B4513;
+    border: 4px solid #D2B48C;
+    border-radius: 50%;
+    color: #F5DEB3;
+    font-size: 2rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.icon:hover {
+    transform: scale(1.1) rotate(10deg);
+    background-color: #A0522D;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.icon:nth-child(1):hover { /* Email */
+    background-color: #1e3a8a;
+}
+
+.icon:nth-child(2):hover { /* WhatsApp */
+    background-color: #25D366;
+}
+
+.icon:nth-child(3):hover { /* Resume */
+    background-color: #4F46E5;
+}
+
+.icon:nth-child(4):hover { /* Projects */
+    background-color: #8B4513;
+}
